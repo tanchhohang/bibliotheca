@@ -1,0 +1,322 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Page background and text color */
+body {
+    background-color: #fffdf7;
+    color: #333;
+}
+
+/* Main container for page content */
+.container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Button Styling - Consistent across standard buttons */
+.btn {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Profile Section Styles */
+.profile-section {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Container for profile image */
+.profile-image {
+    width: 270px;
+    height: 270px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 30px;
+    background-color: #333;
+}
+
+/* Profile image styling */
+.profile-image img {
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+}
+
+/* Container for profile details */
+.profile-details {
+    flex: 1;
+    display: flex;
+}
+
+/* Container for profile information */
+.profile-info-container {
+    width: 70%;
+    display: flex;
+    height: 270px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* Admin badge styling */
+.admin-tag {
+    display: inline-block;
+    background-color: #ff0000;
+    color: white;
+    padding: 6px 50px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Grid layout for profile information */
+.profile-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+}
+
+/* Individual profile info item */
+.profile-info-item {
+    margin-bottom: 10px;
+}
+
+/* Label for profile information */
+.profile-info-label {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Value of profile information */
+.profile-info-value {
+    font-size: 14px;
+}
+
+/* Edit profile button */
+.edit-profile-btn {
+    display: block;
+    width: 70%;
+}
+
+/* Container for action buttons */
+.buttons-container {
+	display: flex;
+    text-align: right;
+    width: 400px;
+    margin-left: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* Button styling in the buttons container */
+.buttons-container .btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Statistics cards container */
+.stats-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Individual statistic card */
+.stat-card {
+    text-align: center;
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* Remove margin from the last stat card */
+.stat-card:last-child {
+    margin-right: 0;
+}
+
+/* Statistic value styling */
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Statistic label styling */
+.stat-label {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Horizontal divider between sections */
+.section-divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 40px 0 20px 0;
+}
+
+/* Transaction and Stats Sections */
+.dashboard-sections {
+    display: flex;
+    margin: 20px 0 40px 0;
+    gap: 20px;
+}
+
+/* Individual dashboard section */
+.dashboard-section {
+    flex: 1;
+}
+
+/* Dashboard section header */
+.dashboard-section h2 {
+    margin-bottom: 10px;
+}
+
+/* Dashboard section description */
+.dashboard-section p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Placeholder for charts */
+.placeholder-chart {
+    width: 682px;
+    height: 376px;
+    background-image: url('../resources/images/stat.png');
+    border-radius: 5px;
+	background-size: fit;
+    background-position: center;
+}
+
+/* Library Edit Section */
+.library-section {
+    margin: 20px 0 40px 0;
+}
+
+/* Header for library section */
+.library-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Search box styling */
+.search-box {
+    position: relative;
+    width: 300px;
+}
+
+/* Search input styling */
+.search-box input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+/* Search button styling */
+.search-box button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Container for book items */
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Individual book item */
+.book-item {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* Book cover image container */
+.book-cover {
+    width: 100px;
+    height: 150px;
+    margin-right: 20px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Book cover image styling */
+.book-cover img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Container for book details */
+.book-details {
+    flex: 1;
+    position: relative;
+}
+
+/* Book title styling */
+.book-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding-right: 60px;
+}
+
+/* Book author styling */
+.book-author {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Book rating and borrow date styling */
+.book-rating, .book-borrow-date {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+/* Book description styling */
+.book-description {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Edit book button */
+.edit-book-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #000000; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}

@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Body styles */
+body {
+	background-color:white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Main container styles */
+.container {
+	background-image: url('../resources/images/bookbg.png');
+	background-size: cover;
+    background-position: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main content area styling */
+.main-content-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    padding: 40px 0;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+    gap: 60px;
+    width: 1116px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Book image container styling */
+.book-image-container {
+    width: 500px;
+    height: 540.59px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Book cover image styles */
+.book-image img {
+    width: 382.04px;
+    height: 549.94px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+/* Book information container styling */
+.book-info-container {
+    width: 400px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 55px;
+}
+
+/* Status dropdown styling */
+.status-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5px;
+    z-index: 100;
+}
+
+.status-badge {
+    display: flex;
+    align-items: center;
+    background-color: #e74c3c; /* Red for Not Available */
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    width: fit-content;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.status-badge.available {
+    background-color: #2ecc71; /* Green for Available */
+}
+
+.dropdown-arrow {
+    margin-left: 10px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+    display: inline-block;
+}
+
+/* Dropdown content styling */
+.status-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 40px;
+}
+
+.status-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.status-dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.status-dropdown:hover .status-dropdown-content {
+    display: block;
+}
+
+/* Book title and author styling */
+.book-title {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.book-author {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+/* Form layout and styling */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Action buttons styling */
+.action-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.return-button {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.return-button:hover {
+    background-color: #27ae60;
+}
+
+.borrow-button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.borrow-button:hover {
+    background-color: #c0392b;
+}
+
+
+
+/* Responsive design for tablets */
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .book-image-container {
+        width: 100%;
+        height: auto;
+        max-width: 382px;
+    }
+    
+    .book-image {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: contain;
+    }
+    
+    .book-info-container {
+        width: 100%;
+        max-width: 500px;
+    }
+
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-group {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .book-title {
+        font-size: 32px;
+    }
+    
+    .book-author {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Body styles */
+body {
+	background-color:white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Main container styles */
+.container {
+	background-image: url('../resources/images/bookbg.png');
+	background-size: cover;
+    background-position: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main content wrapper styles */
+.main-content-wrapper {
+    width: 100%;
+    height: 646px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main content section styles */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+    height: 100%;
+    gap: 60px;
+    width: 100%;
+}
+
+/* Book image container styles */
+.book-image-container {
+    width: 500px;
+    height: 540.59px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Book cover image styles */
+.book-image img {
+    width: 382.04px;
+    height: 549.94px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+
+/* Book information container styles */
+.book-info-container {
+    width: 400px;
+    height: 550px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container for book information and form fields */
+.book-info-container {
+    width: 400px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 55px;
+}
+
+/* Styling for form field groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Form label styling */
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Input field styling */
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Textarea styling for book description */
+.form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Container for status drop-down */
+.status-drop-down {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Status button styling */
+.status-button {
+    background-color: #ff3b30;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* SVG arrow in status button */
+.status-button svg {
+    margin-left: 8px;
+}
+
+/* drop-down menu styling */
+.drop-down-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* drop-down menu item styling */
+.drop-down-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* drop-down item hover effect */
+.drop-down-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Delete button styling */
+.action-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ff3b30;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Delete button hover effect */
+.action-button:hover {
+    background-color: #e0352b;
+}
+
+
+/* Responsive styles for tablets */
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .book-image-container {
+        width: 300px;
+        height: 432px;
+    }
+    
+    .book-info-container {
+        width: 100%;
+        max-width: 500px;
+        margin-left: 0;
+    }
+}

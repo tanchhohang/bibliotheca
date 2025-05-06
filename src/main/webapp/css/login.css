@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* Reset default browser styles and set consistent box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Main body styling */
+main{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../resources/images/loginbg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+
+/* Login form container styling */
+.login-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px;
+    width: 662px;
+    height: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Login heading styling */
+.login-container h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Form field group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Form label styling */
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Form input field styling */
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Password field container for positioning the toggle button */
+.password-field {
+    position: relative;
+}
+
+/* Password visibility toggle button styling */
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sign in button styling */
+.sign-in-btn {
+    background-color: #1976D2; /* Blue button color */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 0px auto 0;
+    width: 150px;
+    text-align: center;
+}
+
+.sign-up-link {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+
+.sign-up-link p {
+	margin: 15px;
+	text-align: center;
+	font-size:16px;
+}
+
+
+

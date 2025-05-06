@@ -1,0 +1,51 @@
+.navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-left .logo {
+  font-size: 1.8rem;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-style: italic;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+  color: #666;
+}
+
+.navbar-right .sign-in {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+  
+  .navbar-right {
+    gap: 1rem;
+  }
+}

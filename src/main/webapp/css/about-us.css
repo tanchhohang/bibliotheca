@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Main container styling - centers content and adds padding */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header section styling */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Grid layout for team members */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+/* Individual team member card styling */
+.team-member {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+/* Image/color box container */
+.member-image {
+    width: 150px;
+    height: auto;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    align-self: stretch;
+    display: flex;
+}
+
+/* Color box styling - fills the image container */
+.color-box {
+    flex-grow: 1;
+    width: 100%;
+}
+
+/* Different color options for team members */
+.black-box {
+    background-color: #000;
+}
+
+.navy-box {
+    background-color: #000080;
+}
+
+.yellow-box {
+    background-color: pink;
+}
+
+.purple-box {
+    background-color: #800080;
+}
+
+.red-box {
+    background-color: #cc0000;
+}
+
+/* Team member information section */
+.member-info {
+    flex-grow: 1;
+}
+
+/* Styling for team member name */
+.member-name {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+}
+
+/* Styling for department information */
+.member-department {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Styling for date of birth information */
+.member-dob {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+/* Styling for biography text */
+.member-bio {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #444;
+}
