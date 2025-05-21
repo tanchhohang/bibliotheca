@@ -1,125 +1,119 @@
 package com.bibliotheca.model;
 
 public class UserModel {
-	private String First_Name;
-	private String Last_Name;
-	private String DOB;
-	private String Gender;
-	private String Email;
-	private String Membership;
-	private String Address;
-	private String Password;
-	private String Role;
-	private String Profile_pic;
-	
-	
-	public UserModel() {}
-	
-	
-	public UserModel(String email, String password, String role) {
-		super();
-		Email = email;
-		Password = password;
-		Role = role;
-	}
-	
-	
-	public UserModel(String first_Name, String last_Name, String dOB, String gender, String email,
-			String membership, String address, String password, String role, String profile_pic) {
-		super();
-		First_Name = first_Name;
-		Last_Name = last_Name;
-		DOB = dOB;
-		Gender = gender;
-		Email = email;
-		Membership = membership;
-		Address = address;
-		Password = password;
-		Role = role;
-		Profile_pic = profile_pic;
-	}
+    private String firstName;
+    private String lastName;
+    private String dob;
+    private String gender;
+    private String email;
+    private String membership;
+    private String address;
+    private String password;
+    private String role;
+    private String profilePic;
 
-	public String getFirst_Name() {
-		return First_Name;
-	}
+    public UserModel() {}
 
-	public void setFirst_Name(String first_Name) {
-		First_Name = first_Name;
-	}
+    public UserModel(String email, String password, String role) {
+        super();
+        this.email = email;
+        this.password = password;
+        this.role = role;
+    }
 
-	public String getLast_Name() {
-		return Last_Name;
-	}
+    public UserModel(String firstName, String lastName, String dob, String gender,
+                     String email, String membership, String address,
+                     String password, String role, String profilePic) {
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = dob;
+        this.gender = gender;
+        this.email = email;
+        this.membership = membership;
+        this.address = address;
+        this.password = password;
+        this.role = role;
+        this.profilePic = profilePic;
+    }
 
-	public void setLast_Name(String last_Name) {
-		Last_Name = last_Name;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public String getDOB() {
-		return DOB;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public void setDOB(String dOB) {
-		DOB = dOB;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public String getGender() {
-		return Gender;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public void setGender(String gender) {
-		Gender = gender;
-	}
+    public String getDob() {
+        return dob;
+    }
 
-	public String getEmail() {
-		return Email;
-	}
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
 
-	public void setEmail(String email) {
-		Email = email;
-	}
+    public String getGender() {
+        return gender;
+    }
 
-	public String getMembership() {
-		return Membership;
-	}
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
-	public void setMembership(String membership) {
-		Membership = membership;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public String getAddress() {
-		return Address;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public void setAddress(String address) {
-		Address = address;
-	}
+    public String getMembership() {
+        return membership;
+    }
 
-	public String getPassword() {
-		return Password;
-	}
+    public void setMembership(String membership) {
+        this.membership = membership;
+    }
 
-	public void setPassword(String password) {
-		Password = password;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public String getRole() {
-		return Role;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public void setRole(String role) {
-		Role = role;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public String getProfile_pic() {
-		return Profile_pic;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public void setProfile_pic(String profile_pic) {
-		Profile_pic = profile_pic;
-	}
-	
-	
-	
-	
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public String getProfilePic() {
+        return profilePic;
+    }
+
+    public void setProfilePic(String profilePic) {
+        this.profilePic = profilePic;
+    }
 }

@@ -34,16 +34,16 @@ public class RegisterService {
 
 
 			// Insert student details
-			insertStmt.setString(1, userModel.getFirst_Name());
-			insertStmt.setString(2, userModel.getLast_Name());
-			insertStmt.setDate(3, Date.valueOf(userModel.getDOB()));
+			insertStmt.setString(1, userModel.getFirstName());
+			insertStmt.setString(2, userModel.getLastName());
+			insertStmt.setDate(3, Date.valueOf(userModel.getDob()));
 			insertStmt.setString(4, userModel.getGender());
 			insertStmt.setString(5, userModel.getEmail());
 			insertStmt.setString(6, userModel.getMembership());
 			insertStmt.setString(7, userModel.getAddress());
 			insertStmt.setString(8, userModel.getPassword());
 			insertStmt.setString(9, userModel.getRole());
-			insertStmt.setString(10, userModel.getProfile_pic());
+			insertStmt.setString(10, userModel.getProfilePic());
 
 			return insertStmt.executeUpdate() > 0;
 		} catch (SQLException e) {

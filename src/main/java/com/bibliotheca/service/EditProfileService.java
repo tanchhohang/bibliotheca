@@ -34,15 +34,15 @@ public class EditProfileService {
             try (ResultSet rs = selectStmt.executeQuery()) {
                 if (rs.next()) {
                     UserModel user = new UserModel();
-                    user.setFirst_Name(rs.getString("First_Name"));
-                    user.setLast_Name(rs.getString("Last_Name"));
-                    user.setDOB(rs.getDate("DOB").toString());
+                    user.setFirstName(rs.getString("First_Name"));
+                    user.setLastName(rs.getString("Last_Name"));
+                    user.setDob(rs.getDate("DOB").toString());
                     user.setGender(rs.getString("Gender"));
                     user.setEmail(rs.getString("Email"));
                     user.setMembership(rs.getString("Membership"));
                     user.setAddress(rs.getString("Address"));
                     user.setRole(rs.getString("Role"));
-                    user.setProfile_pic(rs.getString("Profile_pic"));
+                    user.setProfilePic(rs.getString("Profile_pic"));
                     user.setPassword(rs.getString("Password"));
                     return user;
                 }
@@ -75,16 +75,16 @@ public class EditProfileService {
 
         try (PreparedStatement updateStmt = dbConn.prepareStatement(updateQuery)) {
             // Update user details
-            updateStmt.setString(1, userModel.getFirst_Name());
-            updateStmt.setString(2, userModel.getLast_Name());
-            updateStmt.setDate(3, Date.valueOf(userModel.getDOB()));
+            updateStmt.setString(1, userModel.getFirstName());
+            updateStmt.setString(2, userModel.getLastName());
+            updateStmt.setDate(3, Date.valueOf(userModel.getDob()));
             updateStmt.setString(4, userModel.getGender());
             updateStmt.setString(5, userModel.getEmail());
             updateStmt.setString(6, userModel.getMembership());
             updateStmt.setString(7, userModel.getAddress());
             updateStmt.setString(8, userModel.getPassword());
             updateStmt.setString(9, userModel.getRole());
-            updateStmt.setString(10, userModel.getProfile_pic());
+            updateStmt.setString(10, userModel.getProfilePic());
             updateStmt.setString(11, currentEmail);
 
             return updateStmt.executeUpdate() > 0;

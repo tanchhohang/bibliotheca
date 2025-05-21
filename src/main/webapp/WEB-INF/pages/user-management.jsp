@@ -66,12 +66,12 @@
             <c:forEach items="${userList}" var="user" varStatus="status">
             <tr>
                 <td>${status.index + 1}</td>
-                <td>${user.first_Name}</td>
-                <td>${user.last_Name}</td>
+                <td>${user.firstName}</td>
+                <td>${user.lastName}</td>
                 <td>${user.gender}</td>
                 <td>${user.email}</td>
                 <td class="access">
-                    <form action="${pageContext.request.contextPath}/UserManagementController" method="post" class="role-form" id="roleForm-${status.index}">
+                    <form action="${pageContext.request.contextPath}/usermanagement" method="post" class="role-form" id="roleForm-${status.index}">
                         <input type="hidden" name="action" value="updateRole">
                         <input type="hidden" name="userEmail" value="${user.email}">
                         <select name="newRole" class="role-select ${user.role == 'Admin' ? 'admin-role' : 'user-role'}"

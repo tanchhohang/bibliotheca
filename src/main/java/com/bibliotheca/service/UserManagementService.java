@@ -88,15 +88,15 @@ public class UserManagementService {
             
             while (rs.next()) {
                 UserModel user = new UserModel();
-                user.setFirst_Name(rs.getString("First_Name"));
-                user.setLast_Name(rs.getString("Last_Name"));
-                user.setDOB(rs.getDate("DOB").toString());
+                user.setFirstName(rs.getString("First_Name"));
+                user.setLastName(rs.getString("Last_Name"));
+                user.setDob(rs.getDate("DOB").toString());
                 user.setGender(rs.getString("Gender"));
                 user.setEmail(rs.getString("Email"));
                 user.setMembership(rs.getString("Membership"));
                 user.setAddress(rs.getString("Address"));
                 user.setRole(rs.getString("Role"));
-                user.setProfile_pic(rs.getString("Profile_pic"));
+                user.setProfilePic(rs.getString("Profile_pic"));
                 // Not getting password for security reasons
                 
                 users.add(user);

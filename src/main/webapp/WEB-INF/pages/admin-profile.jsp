@@ -71,6 +71,9 @@
                 <!-- Container for admin action buttons and statistics cards -->
                 <div class="buttons-container">
                     <button class="btn generate-report-btn" id="generateReportBtn">Generate Report</button>
+                    
+                    <a href="${pageContext.request.contextPath}/addbook"><button class="btn generate-report-btn" id="addBookBtn">Add Book</button></a>
+                    
                     <a href="${pageContext.request.contextPath}/usermanagement"><button class="btn edit-users-btn" id="editUsersBtn">Edit Users</button></a>
                     
                     <!-- Statistics display cards -->

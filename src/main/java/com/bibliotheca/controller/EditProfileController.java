@@ -59,9 +59,9 @@ public class EditProfileController extends HttpServlet {
             
             if (user != null) {
                 // Set user data as request attributes
-                request.setAttribute("First_Name", user.getFirst_Name());
-                request.setAttribute("Last_Name", user.getLast_Name());
-                request.setAttribute("DOB", user.getDOB());
+                request.setAttribute("First_Name", user.getFirstName());
+                request.setAttribute("Last_Name", user.getLastName());
+                request.setAttribute("DOB", user.getDob());
                 request.setAttribute("Gender", user.getGender());
                 request.setAttribute("Email", user.getEmail());
                 request.setAttribute("Membership", user.getMembership());
@@ -193,7 +193,7 @@ public class EditProfileController extends HttpServlet {
 	    Part image = request.getPart("image");
 	    String profilePic = (image != null && image.getSize() > 0) ? 
 	                     imageUtil.getImageNameFromPart(image) : 
-	                     currentUser.getProfile_pic();
+	                     currentUser.getProfilePic();
 
 	    return new UserModel(firstName, lastName, dobStr, gender, email, membership, address, password, currentUser.getRole(), profilePic);
 	}
@@ -225,9 +225,9 @@ public class EditProfileController extends HttpServlet {
 			// Fetch user data again to display in form
 			UserModel user = editProfileService.getUserByEmail(userEmail);
 			if (user != null) {
-				request.setAttribute("First_Name", user.getFirst_Name());
-				request.setAttribute("Last_Name", user.getLast_Name());
-				request.setAttribute("DOB", user.getDOB());
+				request.setAttribute("First_Name", user.getFirstName());
+				request.setAttribute("Last_Name", user.getLastName());
+				request.setAttribute("DOB", user.getDob());
 				request.setAttribute("Gender", user.getGender());
 				request.setAttribute("Email", user.getEmail());
 				request.setAttribute("Membership", user.getMembership());
