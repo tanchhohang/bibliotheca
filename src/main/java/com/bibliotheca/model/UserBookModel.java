@@ -5,7 +5,7 @@ public class UserBookModel {
 	private int Book_ID;
 	private String Borrowed_Date;
 	private String Due_Date;
-	private String Deturn_Date;
+	private String Return_Date;
 	private String Fine;
 	
 	
@@ -15,14 +15,14 @@ public class UserBookModel {
 		Book_ID = book_ID;
 	}
 	
-	public UserBookModel(int user_ID, int book_ID, String borrowed_Date, String due_Date, String deturn_Date,
+	public UserBookModel(int user_ID, int book_ID, String borrowed_Date, String due_Date, String return_Date,
 			String fine) {
 		super();
 		this.User_ID = user_ID;
 		Book_ID = book_ID;
 		Borrowed_Date = borrowed_Date;
 		Due_Date = due_Date;
-		Deturn_Date = deturn_Date;
+		Return_Date = return_Date;
 		Fine = fine;
 	}
 
@@ -58,12 +58,12 @@ public class UserBookModel {
 		Due_Date = due_Date;
 	}
 
-	public String getDeturn_Date() {
-		return Deturn_Date;
+	public String getReturn_Date() {
+		return Return_Date;
 	}
 
-	public void setDeturn_Date(String deturn_Date) {
-		Deturn_Date = deturn_Date;
+	public void setReturn_Date(String return_Date) {
+		Return_Date = return_Date;
 	}
 
 	public String getFine() {

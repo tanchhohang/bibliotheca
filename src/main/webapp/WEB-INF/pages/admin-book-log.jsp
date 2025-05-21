@@ -26,7 +26,7 @@
                 <!-- Book cover image container with background shape -->
                 <div class="book-image-container">
                 
-                    <img class="book-image" src="${pageContext.request.contextPath}/resources/images/nocountry.png" alt="No Country For Old Men Book Cover">
+                    <img class="book-image" src="${pageContext.request.contextPath}/resources/images/${book.bookImage}" alt="${book.bookName} Cover">
                 </div>
                 
                 <!-- Book information and form controls -->
@@ -44,36 +44,43 @@
                     </div>
                     
                     <!-- Book title and author -->
-                    <h1 class="book-title">No Country For Old Men</h1>
-                    <h2 class="book-author">by Cormac McCarthy</h2>
+                    <h1 class="book-title">${book.bookName}</h1>${book.bookId}
+                    <h2 class="book-author">by ${book.author}</h2>
                     
                     <!-- Borrowing form fields -->
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Borrowed By:</label>
-                            <input type="text" placeholder="User ID">
-                        </div>
-                        <div class="form-group">
-                            <label>Borrowed Date:</label>
-                            <input type="text" placeholder="dd/mm/yy">
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Due Date:</label>
-                            <input type="text" placeholder="dd/mm/yy">
-                        </div>
-                        <div class="form-group">
-                            <label>Return Date:</label>
-                            <input type="text" placeholder="dd/mm/yy">
-                        </div>
-                    </div>
-                    
-                    <!-- Action buttons for logging book status -->
-                    <button class="action-button return-button">Log Returned</button>
-                    <button class="action-button borrow-button">Log Book</button>
-                </div>
+                    <form method="post" action="${pageContext.request.contextPath}/adminbooklog">
+					    <input type="hidden" name="action" value="borrow" />
+					    <input type="hidden" name="bookId" value="" />
+					
+					    <div class="form-row">
+					        <div class="form-group">
+					            <label>Borrowed By:</label>
+					            <input type="text" name="userId" placeholder="User ID" required>
+					        </div>
+					        <div class="form-group">
+					            <label>Borrowed Date:</label>
+					            <input type="date" name="borrowedDate" placeholder="dd/mm/yy" required>
+					        </div>
+					    </div>
+					
+					    <div class="form-row">
+					        <div class="form-group">
+					            <label>Due Date:</label>
+					            <input type="date" name="dueDate" placeholder="dd/mm/yy" required>
+					        </div>
+					        <div class="form-group">
+					            <label>Return Date:</label>
+					            <input type="date" name="returnDate" placeholder="dd/mm/yy">
+					        </div>
+					    </div>
+					
+					    <!-- Action buttons for logging book status -->
+					    <div class="form-row">
+					        <button type="submit" name="action" value="return" class="action-button return-button">Log Returned</button>
+					        <button type="submit" name="action" value="borrow" class="action-button borrow-button">Log Book</button>
+					    </div>
+					</form>
+				</div>
             </div>
         </div>
         

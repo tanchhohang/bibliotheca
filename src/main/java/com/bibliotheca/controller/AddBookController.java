@@ -8,16 +8,16 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Servlet implementation class AdminBookLogController
+ * Servlet implementation class AddBookController
  */
-@WebServlet("/adminbooklog")
-public class AdminBookLogController extends HttpServlet {
+@WebServlet("/addbook")
+public class AddBookController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminBookLogController() {
+    public AddBookController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,7 +27,7 @@ public class AdminBookLogController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/WEB-INF/pages/admin-book-log.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/pages/addbook.jsp").forward(request, response);
 	}
 
 	/**

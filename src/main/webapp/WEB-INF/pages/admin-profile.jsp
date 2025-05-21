@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,46 +22,42 @@
         <section class="profile-section">
             <!-- User profile image container -->
             <div class="profile-image">
-                <img src="${pageContext.request.contextPath}/resources/images/profilepic.jpg" alt="Profile avatar">
+                <c:choose>
+                    <c:when test="${not empty admin.profilePic}">
+                        <img src="${pageContext.request.contextPath}/resources/images/${admin.profilePic}" alt="Admin profile">
+                    </c:when>
+                    <c:otherwise>
+                        <img src="${pageContext.request.contextPath}/resources/images/profilepic.jpg" alt="Default profile">
+                    </c:otherwise>
+                </c:choose>
             </div>
             
             <!-- Profile details with personal info and action buttons -->
             <div class="profile-details">
                 <div class="profile-info-container">
                     <!-- Username with admin badge -->
-                    <h1>admin1 <span class="admin-tag">Admin</span></h1>
-                    <p>#95510618</p>
+                    <h1>${admin.firstName} ${admin.lastName} <span class="admin-tag">${admin.role}</span></h1>
                     
                     <!-- Grid of user information -->
                     <div class="profile-info">
                         <div class="profile-info-item">
                             <div class="profile-info-label">Gender:</div>
-                            <div class="profile-info-value">gmail</div>
+                            <div class="profile-info-value">${admin.gender}</div>
                         </div>
                         
                         <div class="profile-info-item">
                             <div class="profile-info-label">Address:</div>
-                            <div class="profile-info-value">gmail</div>
+                            <div class="profile-info-value">${admin.address}</div>
                         </div>
                         
                         <div class="profile-info-item">
                             <div class="profile-info-label">Birthday:</div>
-                            <div class="profile-info-value">06/06/1006</div>
-                        </div>
-                        
-                        <div class="profile-info-item">
-                            <div class="profile-info-label">Books Count:</div>
-                            <div class="profile-info-value">03</div>
+                            <div class="profile-info-value">${admin.dob}</div>
                         </div>
                         
                         <div class="profile-info-item">
                             <div class="profile-info-label">Email:</div>
-                            <div class="profile-info-value">anustam@gmail.com</div>
-                        </div>
-                        
-                        <div class="profile-info-item">
-                            <div class="profile-info-label">Favorite genre:</div>
-                            <div class="profile-info-value">Romcom</div>
+                            <div class="profile-info-value">${admin.email}</div>
                         </div>
                     </div>
                     
@@ -80,17 +77,17 @@
                     <div class="stats-cards">
                         <div class="stat-card">
                             <div class="stat-label">Total Members</div>
-                            <div class="stat-value">39</div>
-                        </div>
-                        
-                        <div class="stat-card">
-                            <div class="stat-label">Total Books</div>
-                            <div class="stat-value">56</div>
+                            <div class="stat-value">${totalMembers}</div>
                         </div>
                         
                         <div class="stat-card">
                             <div class="stat-label">Total Borrowed</div>
-                            <div class="stat-value">36</div>
+                            <div class="stat-value">${totalBorrowed}</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-label">Available Books</div>
+                            <div class="stat-value">${availableBooks}</div>
                         </div>
                     </div>
                 </div>
@@ -104,14 +101,14 @@
         <section class="dashboard-sections">
             <div class="dashboard-section">
                 <h2>Monthly Transaction</h2>
-                <p>Look back to your reading history</p>
+                <p>Track book borrowing and returning trends</p>
                 <!-- Placeholder for transaction chart -->
                 <div class="placeholder-chart" id="transactionChart"></div>
             </div>
             
             <div class="dashboard-section">
                 <h2>Reading Stats</h2>
-                <p>Look back to your reading history</p>
+                <p>Book usage statistics by category</p>
                 <!-- Placeholder for reading stats chart -->
                 <div class="placeholder-chart" id="readingStatsChart"></div>
             </div>
@@ -125,7 +122,7 @@
             <div class="library-header">
                 <div>
                     <h2>Edit Library</h2>
-                    <p>Look back to your reading history</p>
+                    <p>Manage your book collection</p>
                 </div>
                 
                 <!-- Search box for books -->
@@ -137,69 +134,98 @@
             
             <!-- Container for book items -->
             <div class="books-container">
-                <!-- Book item 1 -->
-                <div class="book-item">
-                    <div class="book-cover">
-                        <img src="${pageContext.request.contextPath}/resources/images/norwegian.png" alt="Meditations book cover">
-                    </div>
-                    
-                    <div class="book-details">
-                        <button class="edit-book-btn" data-book-id="1">Edit</button>
-                        <h3 class="book-title">Meditations</h3>
-                        <p class="book-author">Marcus Aurelius</p>
-                        <p class="book-rating">Your Rating: 8.9/10</p>
-                        <p class="book-borrow-date">Borrow Date: 09/04/25 - Present</p>
-                        <p class="book-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                    </div>
-                </div>
-                
-                <!-- Book item 2 -->
-                <div class="book-item">
-                    <div class="book-cover">
-                        <img src="${pageContext.request.contextPath}/resources/images/norwegian.png" alt="The BFG book cover">
-                    </div>
-                    
-                    <div class="book-details">
-                        <button class="edit-book-btn" data-book-id="2">Edit</button>
-                        <h3 class="book-title">The BFG</h3>
-                        <p class="book-author">Roald Dahl</p>
-                        <p class="book-rating">Your Rating: 8.9/10</p>
-                        <p class="book-borrow-date">Borrow Date: 09/04/25 - Present</p>
-                        <p class="book-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                    </div>
-                </div>
-                
-                <!-- Book item 3 -->
-                <div class="book-item">
-                    <div class="book-cover">
-                        <img src="${pageContext.request.contextPath}/resources/images/norwegian.png" alt="The Prince book cover">
-                    </div>
-                    
-                    <div class="book-details">
-                        <button class="edit-book-btn" data-book-id="3">Edit</button>
-                        <h3 class="book-title">The Prince</h3>
-                        <p class="book-author">Nicolo Machiavelli</p>
-                        <p class="book-rating">Your Rating: 8.9/10</p>
-                        <p class="book-borrow-date">Borrow Date: 09/04/25 - Present</p>
-                        <p class="book-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                    </div>
-                </div>
-                
-                <!-- Book item 4 -->
-                <div class="book-item">
-                    <div class="book-cover">
-                        <img src="${pageContext.request.contextPath}/resources/images/norwegian.png" alt="Norwegian Woods book cover">
-                    </div>
-                    
-                    <div class="book-details">
-                        <button class="edit-book-btn" data-book-id="4">Edit</button>
-                        <h3 class="book-title">Norwegian Woods</h3>
-                        <p class="book-author">Murakami</p>
-                        <p class="book-rating">Your Rating: 8.9/10</p>
-                        <p class="book-borrow-date">Borrow Date: 09/04/25 - Present</p>
-                        <p class="book-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                    </div>
-                </div>
+                <c:choose>
+                    <c:when test="${not empty recentBooks}">
+                        <!-- Display database books if available -->
+                        <c:forEach var="book" items="${recentBooks}">
+                            <div class="book-item">
+                                <div class="book-cover">
+                                    <c:choose>
+                                        <c:when test="${not empty book.bookImage}">
+                                            <img src="${pageContext.request.contextPath}/resources/images/${book.bookImage}" 
+                                                 alt="${book.bookName} book cover">
+                                        </c:when>
+                                        <c:otherwise>
+                                            <img src="${pageContext.request.contextPath}/resources/images/norwegian.png" 
+                                                 alt="Default book cover">
+                                        </c:otherwise>
+                                    </c:choose>
+                                </div>
+                                
+                                <div class="book-details">
+                                    <button class="edit-book-btn" data-book-id="${book.bookId}">Edit</button>
+                                    <h3 class="book-title">${book.bookName}</h3>
+                                    <p class="book-author">${book.author}</p>
+                                    <p class="book-genre">Genre: ${book.genre}</p>
+                                    <p class="book-availability">Availability: ${book.availability}</p>
+                                    <p class="book-description">${book.description}</p>
+                                </div>
+                            </div>
+                        </c:forEach>
+                    </c:when>
+                    <c:otherwise>
+                        <!-- Fallback to show sample books if no books are returned from the controller -->
+                        <!-- Book item 1 -->
+                        <div class="book-item">
+                            <div class="book-cover">
+                                <img src="${pageContext.request.contextPath}/resources/images/norwegian.png" alt="Meditations book cover">
+                            </div>
+                            
+                            <div class="book-details">
+                                <button class="edit-book-btn" data-book-id="1">Edit</button>
+                                <h3 class="book-title">Meditations</h3>
+                                <p class="book-author">Marcus Aurelius</p>
+                                <p class="book-availability">Availability: Available</p>
+                                <p class="book-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Book item 2 -->
+                        <div class="book-item">
+                            <div class="book-cover">
+                                <img src="${pageContext.request.contextPath}/resources/images/norwegian.png" alt="The BFG book cover">
+                            </div>
+                            
+                            <div class="book-details">
+                                <button class="edit-book-btn" data-book-id="2">Edit</button>
+                                <h3 class="book-title">The BFG</h3>
+                                <p class="book-author">Roald Dahl</p>
+                                <p class="book-availability">Availability: Borrowed</p>
+                                <p class="book-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Book item 3 -->
+                        <div class="book-item">
+                            <div class="book-cover">
+                                <img src="${pageContext.request.contextPath}/resources/images/norwegian.png" alt="The Prince book cover">
+                            </div>
+                            
+                            <div class="book-details">
+                                <button class="edit-book-btn" data-book-id="3">Edit</button>
+                                <h3 class="book-title">The Prince</h3>
+                                <p class="book-author">Nicolo Machiavelli</p>
+                                <p class="book-availability">Availability: Available</p>
+                                <p class="book-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Book item 4 -->
+                        <div class="book-item">
+                            <div class="book-cover">
+                                <img src="${pageContext.request.contextPath}/resources/images/norwegian.png" alt="Norwegian Woods book cover">
+                            </div>
+                            
+                            <div class="book-details">
+                                <button class="edit-book-btn" data-book-id="4">Edit</button>
+                                <h3 class="book-title">Norwegian Woods</h3>
+                                <p class="book-author">Murakami</p>
+                                <p class="book-availability">Availability: Available</p>
+                                <p class="book-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                            </div>
+                        </div>
+                    </c:otherwise>
+                </c:choose>
             </div>
         </section>
     </div>

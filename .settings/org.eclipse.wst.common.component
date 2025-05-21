@@ -1,107 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-                
+                    
+    
     
     
     <wb-module deploy-name="bibliotheca">
+                
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                
         <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
-                                
-        
-        
-        <dependent-module archiveName="jakarta.servlet.jsp.jstl-api-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/jar_files/jakarta.servlet.jsp.jstl-api-2.0.0.jar">
-                                                
-            
-            
+        <dependent-module archiveName="jakarta.servlet.jsp.jstl-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/sonic/Downloads/jar_files/jar_files/jakarta.servlet.jsp.jstl-2.0.0.jar">
             <dependency-type>uses</dependency-type>
-                                            
-        
-        
         </dependent-module>
-                                
-        
-        
-        <dependent-module archiveName="jakarta.xml.bind-api-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/jar_files/jakarta.xml.bind-api-3.0.0.jar">
-                                                
-            
-            
+        <dependent-module archiveName="jakarta.el-api-4.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/sonic/Downloads/jar_files/jar_files/jakarta.el-api-4.0.0.jar">
             <dependency-type>uses</dependency-type>
-                                            
-        
-        
         </dependent-module>
-                                
-        
-        
-        <dependent-module archiveName="mysql-connector-j-9.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/mysql-connector-j-9.0.0.jar">
-                                                
-            
-            
+        <dependent-module archiveName="mysql-connector-j-9.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/sonic/Downloads/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0.jar">
             <dependency-type>uses</dependency-type>
-                                            
-        
-        
         </dependent-module>
-                                
-        
-        
-        <dependent-module archiveName="jakarta.activation-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/jar_files/jakarta.activation-2.0.0.jar">
-                                                
-            
-            
+        <dependent-module archiveName="jakarta.servlet-api-5.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/sonic/Downloads/jar_files/jar_files/jakarta.servlet-api-5.0.0.jar">
             <dependency-type>uses</dependency-type>
-                                            
-        
-        
         </dependent-module>
-                                
-        
-        
-        <dependent-module archiveName="jakarta.servlet.jsp.jstl-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/jar_files/jakarta.servlet.jsp.jstl-2.0.0.jar">
-                                                
-            
-            
+        <dependent-module archiveName="jakarta.xml.bind-api-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/sonic/Downloads/jar_files/jar_files/jakarta.xml.bind-api-3.0.0.jar">
             <dependency-type>uses</dependency-type>
-                                            
-        
-        
         </dependent-module>
-                                
-        
-        
-        <dependent-module archiveName="jakarta.servlet-api-5.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/jar_files/jakarta.servlet-api-5.0.0.jar">
-                                                
-            
-            
+        <dependent-module archiveName="jakarta.servlet.jsp.jstl-api-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/sonic/Downloads/jar_files/jar_files/jakarta.servlet.jsp.jstl-api-2.0.0.jar">
             <dependency-type>uses</dependency-type>
-                                            
-        
-        
         </dependent-module>
-                                
-        
-        
-        <dependent-module archiveName="jakarta.el-api-4.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/jar_files/jakarta.el-api-4.0.0.jar">
-                                                
-            
-            
+        <dependent-module archiveName="jakarta.activation-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/sonic/Downloads/jar_files/jar_files/jakarta.activation-2.0.0.jar">
             <dependency-type>uses</dependency-type>
-                                            
-        
-        
         </dependent-module>
-                                
+                                        
+        
         
         
         <property name="context-root" value="bibliotheca"/>
-                                
+                                        
+        
         
         
         <property name="java-output-path" value="/bibliotheca/build/classes"/>
-                            
+                                    
+    
     
     
     </wb-module>
-            
+                
+
 
 
 </project-modules>

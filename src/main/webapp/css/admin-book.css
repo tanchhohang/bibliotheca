@@ -54,8 +54,8 @@ body {
 
 /* Book cover image styles */
 img {
-    width: 500px;
-    height: 540.59px;
+    width: 400px;
+    height: 56	0.59px;
     position: relative;
     z-index: 2;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);

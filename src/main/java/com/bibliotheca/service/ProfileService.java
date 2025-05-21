@@ -109,7 +109,7 @@ public class ProfileService {
                     userBook.setBook_ID(rs.getInt("Book_ID"));
                     userBook.setBorrowed_Date(rs.getString("Borrowed_Date"));
                     userBook.setDue_Date(rs.getString("Due_Date"));
-                    userBook.setDeturn_Date(rs.getString("Deturn_Date"));
+                    userBook.setReturn_Date(rs.getString("Deturn_Date"));
                     userBook.setFine(rs.getString("Fine"));
                     
                     result.put("userBook", userBook);
@@ -208,7 +208,7 @@ public class ProfileService {
                     userBook.setBook_ID(rs.getInt("Book_ID"));
                     userBook.setBorrowed_Date(rs.getString("Borrowed_Date"));
                     userBook.setDue_Date(rs.getString("Due_Date"));
-                    userBook.setDeturn_Date(rs.getString("Deturn_Date"));
+                    userBook.setReturn_Date(rs.getString("Deturn_Date"));
                     userBook.setFine(rs.getString("Fine"));
                     userBooks.add(userBook);
                 }
