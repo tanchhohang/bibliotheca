@@ -55,19 +55,9 @@
                     <a href="${pageContext.request.contextPath}/editprofile"><button class="btn edit-profile-btn" id="editProfileBtn">Edit Profile</button></a>
                 </div>
                 <div class="buttons-container">
-                    <button class="btn generate-report-btn" id="generateReportBtn">Generate Report</button>
+                    <a href="${pageContext.request.contextPath}/userreport"><button class="btn generate-report-btn" id="generateReportBtn">Generate Report</button></a>
                     <div class="stats-cards">
                         <div class="stat-card">
-                            <div class="stat-label">Total Members</div>
-                            <div class="stat-value">${stats.totalMembers}</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-label">Total Books</div>
-                            <div class="stat-value">${stats.totalBooks}</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-label">Total Borrowed</div>
-                            <div class="stat-value">${stats.totalBorrowed}</div>
                         </div>
                     </div>
                 </div>
