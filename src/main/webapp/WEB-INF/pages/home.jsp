@@ -30,7 +30,7 @@
                 <p>Your Digital Library Hub</p>
                 <c:choose>
 			      <c:when test="${not empty cookie.role}">
-			       	<a href="#"><button class="cta-button">HOME</button></a>
+			       	<a href="#dune-container"><button class="cta-button">Latest News </button></a>
 			      </c:when>
 			      <c:otherwise>
 			        <a href="${pageContext.request.contextPath}/register"><button class="cta-button">JOIN US NOW</button></a>

@@ -28,8 +28,8 @@
                     <div class="status-badge">${book.availability}</div>
                     <h1 class="book-title">${book.bookName}</h1>
                     <h2 class="book-author">by ${book.author}</h2>
-                    <div class="book-genre">Genre: ${book.genre}</div>
-                    <div class="book-publisher">Published by: ${book.publisher}</div>
+                    <div class="book-genre">Genre: ${book.genre}</div><br>
+                    <div class="book-publisher">Published by: ${book.publisher}</div><br>
 
                     <div class="book-description">
                         <p>${book.description}</p>

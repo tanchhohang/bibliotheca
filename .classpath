@@ -13,37 +13,37 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/Users/sameep/Desktop/Advanced Programming and Technologies/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0.jar">
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/mysql-connector-j-9.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/sameep/Downloads/jar_files/jakarta.activation-2.0.0.jar">
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/jar_files/jakarta.servlet.jsp.jstl-api-2.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/sameep/Downloads/jar_files/jakarta.el-api-4.0.0.jar">
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/jar_files/jakarta.servlet-api-5.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/sameep/Downloads/jar_files/jakarta.servlet-api-5.0.0.jar">
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/jar_files/jakarta.xml.bind-api-3.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/sameep/Downloads/jar_files/jakarta.servlet.jsp.jstl-2.0.0.jar">
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/jar_files/jakarta.activation-2.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/sameep/Downloads/jar_files/jakarta.servlet.jsp.jstl-api-2.0.0.jar">
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/jar_files/jakarta.el-api-4.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/sameep/Downloads/jar_files/jakarta.xml.bind-api-3.0.0.jar">
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/OneDrive_2025-03-22/Advanced Programming and Technologies/Week 8 - Introduction to JSTL/Tutorial/Java Jar Files/jar_files/jakarta.servlet.jsp.jstl-2.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
