@@ -167,6 +167,73 @@ public class BookService {
         }
     }
     
+    /**
+     * Updates the availability status of a book
+     * 
+     * @param bookId The ID of the book to update
+     * @param availability The new availability status (e.g., "Available", "Not Available")
+     * @return true if update was successful, false otherwise
+     */
+    public boolean updateBookAvailability(int bookId, String availability) {
+        if (isConnectionError) {
+            System.out.println("Database Connection Error!");
+            return false;
+        }
+        
+        String query = "UPDATE books SET Availability = ? WHERE Book_ID = ?";
+        
+        try (PreparedStatement stmt = dbConn.prepareStatement(query)) {
+            stmt.setString(1, availability);
+            stmt.setInt(2, bookId);
+            
+            int rowsAffected = stmt.executeUpdate();
+            System.out.println("Updated availability for book ID " + bookId + ": " + rowsAffected + " rows affected");
+            
+            return rowsAffected > 0;
+            
+        } catch (SQLException e) {
+            System.out.println("SQL Error in updateBookAvailability: " + e.getMessage());
+            e.printStackTrace();
+            return false;
+        }
+    }
+    
+    /**
+     * Adds a new book to the database
+     * 
+     * @param book The BookModel object containing book details
+     * @return true if insertion was successful, false otherwise
+     */
+    public boolean addBook(BookModel book) {
+        if (isConnectionError) {
+            System.out.println("Database Connection Error!");
+            return false;
+        }
+        
+        String query = "INSERT INTO books (Book_Name, Author, Genre, Description, Publisher, Availability, Book_Image) "
+                + "VALUES (?, ?, ?, ?, ?, ?, ?)";
+        
+        try (PreparedStatement stmt = dbConn.prepareStatement(query)) {
+            stmt.setString(1, book.getBookName());
+            stmt.setString(2, book.getAuthor());
+            stmt.setString(3, book.getGenre());
+            stmt.setString(4, book.getDescription());
+            stmt.setString(5, book.getPublisher());
+            stmt.setString(6, book.getAvailability());
+            stmt.setString(7, book.getBookImage());
+            
+            int rowsAffected = stmt.executeUpdate();
+            System.out.println("Added new book: " + book.getBookName() + ", rows affected: " + rowsAffected);
+            
+            return rowsAffected > 0;
+            
+        } catch (SQLException e) {
+            System.out.println("SQL Error in addBook: " + e.getMessage());
+            e.printStackTrace();
+            return false;
+        }
+    }
+    
     public void closeConnection() {
         if (dbConn != null) {
             try {

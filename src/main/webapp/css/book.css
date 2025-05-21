@@ -55,8 +55,8 @@ body {
 }
 
 /* Book cover image styles */
-.book-image img {
-    width: 382.04px;
+.book-image{
+    width: 400.04px;
     height: 549.94px;
     position: relative;
     z-index: 2;

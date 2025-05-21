@@ -35,15 +35,15 @@ public class LibraryController extends HttpServlet {
         try {
             switch (action) {
                 case "genre":
-                    String genre = request.getParameter("genre");
-                    if (genre != null && !genre.trim().isEmpty()) {
-                        books = bookService.getBooksByGenre(genre);
-                        System.out.println("Fetched books by genre: " + genre + ", count: " + books.size());
-                    } else {
-                        books = bookService.getAllBooks();
-                        System.out.println("Genre parameter empty, fetched all books");
-                    }
-                    break;
+//                    String genre = request.getParameter("genre");
+//                    if (genre != null && !genre.trim().isEmpty()) {
+//                        books = bookService.getBooksByGenre(genre);
+//                        System.out.println("Fetched books by genre: " + genre + ", count: " + books.size());
+//                    } else {
+//                        books = bookService.getAllBooks();
+//                        System.out.println("Genre parameter empty, fetched all books");
+//                    }
+//                    break;
 
                 case "author":
                     String author = request.getParameter("author");

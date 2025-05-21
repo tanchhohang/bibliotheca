@@ -99,7 +99,7 @@ public class ProfileService {
         }
         
         // Get the current book borrowing record
-        String userBookQuery = "SELECT * FROM user_books WHERE User_ID = ? AND Deturn_Date IS NULL LIMIT 1";
+        String userBookQuery = "SELECT * FROM user_books WHERE User_ID = ? AND Return_Date IS NULL LIMIT 1";
         try (PreparedStatement stmt = dbConn.prepareStatement(userBookQuery)) {
             stmt.setInt(1, userId);
             try (ResultSet rs = stmt.executeQuery()) {
@@ -109,7 +109,7 @@ public class ProfileService {
                     userBook.setBook_ID(rs.getInt("Book_ID"));
                     userBook.setBorrowed_Date(rs.getString("Borrowed_Date"));
                     userBook.setDue_Date(rs.getString("Due_Date"));
-                    userBook.setReturn_Date(rs.getString("Deturn_Date"));
+                    userBook.setReturn_Date(rs.getString("Return_Date"));
                     userBook.setFine(rs.getString("Fine"));
                     
                     result.put("userBook", userBook);
@@ -208,7 +208,7 @@ public class ProfileService {
                     userBook.setBook_ID(rs.getInt("Book_ID"));
                     userBook.setBorrowed_Date(rs.getString("Borrowed_Date"));
                     userBook.setDue_Date(rs.getString("Due_Date"));
-                    userBook.setReturn_Date(rs.getString("Deturn_Date"));
+                    userBook.setReturn_Date(rs.getString("Return_Date"));
                     userBook.setFine(rs.getString("Fine"));
                     userBooks.add(userBook);
                 }
@@ -226,20 +226,20 @@ public class ProfileService {
             return null;
         }
         
-        String query = "SELECT * FROM books WHERE bookId = ?";
+        String query = "SELECT * FROM books WHERE Book_ID = ?";
         try (PreparedStatement stmt = dbConn.prepareStatement(query)) {
             stmt.setInt(1, bookId);
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
                     BookModel book = new BookModel();
-                    book.setBookId(rs.getInt("bookId"));
-                    book.setBookName(rs.getString("bookName"));
-                    book.setAuthor(rs.getString("author"));
-                    book.setGenre(rs.getString("genre"));
-                    book.setDescription(rs.getString("description"));
-                    book.setPublisher(rs.getString("publisher"));
-                    book.setAvailability(rs.getString("availability"));
-                    book.setBookImage(rs.getString("bookImage"));
+                    book.setBookId(rs.getInt("Book_ID"));
+                    book.setBookName(rs.getString("Book_Name"));
+                    book.setAuthor(rs.getString("Author"));
+                    book.setGenre(rs.getString("Genre"));
+                    book.setDescription(rs.getString("Description"));
+                    book.setPublisher(rs.getString("Publisher"));
+                    book.setAvailability(rs.getString("Availability"));
+                    book.setBookImage(rs.getString("Book_Image"));
                     return book;
                 }
             }
@@ -294,7 +294,7 @@ public class ProfileService {
             return 0;
         }
         
-        String query = "SELECT COUNT(*) as count FROM user_books WHERE Deturn_Date IS NULL";
+        String query = "SELECT COUNT(*) as count FROM user_books WHERE Return_Date IS NULL";
         try (PreparedStatement stmt = dbConn.prepareStatement(query);
              ResultSet rs = stmt.executeQuery()) {
             if (rs.next()) {
